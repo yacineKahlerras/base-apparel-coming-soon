@@ -23,6 +23,25 @@ $font-weight-3: 600;
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
+
+  h1 {
+    font-size: 3.8rem;
+    letter-spacing: 1.3rem;
+    font-weight: $font-weight-3;
+    text-transform: uppercase;
+    color: $Dark-Grayish-Red;
+    line-height: 1.2;
+
+    &.decorated-title {
+      color: $Desaturated-Red;
+      font-weight: $font-weight-1;
+    }
+  }
+
+  p {
+    color: $Desaturated-Red;
+    font-weight: $font-weight-2;
+  }
 }
 
 button {
@@ -41,7 +60,7 @@ button {
 input {
   border: 0.2rem solid $gray;
   border-radius: 1.86em;
-  padding: 1em 1em;
+  padding: 0.875em 2em;
 
   &::placeholder {
     color: $gray;

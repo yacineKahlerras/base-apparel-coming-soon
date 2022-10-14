@@ -91,6 +91,22 @@ body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
 }
+body h1 {
+  font-size: 3.8rem;
+  letter-spacing: 1.3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: hsl(0deg, 6%, 24%);
+  line-height: 1.2;
+}
+body h1.decorated-title {
+  color: hsl(0deg, 36%, 70%);
+  font-weight: 300;
+}
+body p {
+  color: hsl(0deg, 36%, 70%);
+  font-weight: 400;
+}
 
 button {
   background: linear-gradient(to right, hsl(0deg, 80%, 86%), hsl(0deg, 74%, 74%));
@@ -109,7 +125,7 @@ button {
 input {
   border: 0.2rem solid #daced0;
   border-radius: 1.86em;
-  padding: 1em 1em;
+  padding: 0.875em 2em;
 }
 input::-moz-placeholder {
   color: #daced0;
