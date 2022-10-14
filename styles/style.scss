@@ -1,1 +1,21 @@
 @use "utils" as *;
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-hero-container {
+  width: $width-1;
+  margin: 0 auto;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  @include desktop {
+    display: none;
+  }
+}

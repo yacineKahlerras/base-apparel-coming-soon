@@ -10,6 +10,8 @@ $font-weight-1: 300;
 $font-weight-2: 400;
 $font-weight-3: 600;
 
+$width-1: min(100%, 48.3rem);
+
 @mixin desktop {
   @media (min-width: 56em) {
     @content;

@@ -135,4 +135,25 @@ input:-ms-input-placeholder {
 }
 input::placeholder {
   color: #daced0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-hero-container {
+  width: min(100%, 48.3rem);
+  margin: 0 auto;
+}
+.mobile-hero-container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (min-width: 56em) {
+  .mobile-hero-container {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
