@@ -1,103 +1,44 @@
-$light: #f7f7f7;
-$dark: #222121;
-$lime: #00cc66;
-$orangeRed: #fb4b4e;
-$blue: #2541b2;
+$Desaturated-Red: hsl(0, 36%, 70%);
+$Soft-Red: hsl(0, 93%, 68%);
+$Dark-Grayish-Red: hsl(0, 6%, 24%);
+$gray: #daced0;
+$gradient-1: linear-gradient(to bottom, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+$gradient-2: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
 
 $transition-1: 0.3s;
-$width-1: min(90%, 111.6rem);
-$width-2: min(100%, 45rem);
-$font-size-1: clamp(5.5rem, 5.2vw, 7.5rem);
+$font-weight-1: 300;
+$font-weight-2: 400;
+$font-weight-3: 600;
+
+@mixin desktop {
+  @media (min-width: 56em) {
+    @content;
+  }
+}
 
 :root {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Kumbh Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
-  color: $dark;
-  background: $light;
-  padding-bottom: 10rem;
-
-  h1 {
-    font-size: $font-size-1;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0rem;
-
-    &:last-of-type {
-      margin-bottom: 1rem;
-    }
-
-    &.highlighted-text {
-      color: $lime;
-    }
-
-    &.logo {
-      font-size: 3.5rem;
-      font-weight: 400;
-    }
-  }
-
-  p {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-  }
 }
 
 button {
-  background: transparent;
+  background: $gradient-2;
   border: none;
   cursor: pointer;
-}
+  border-radius: 3rem;
+  padding: 2rem 3.5rem;
 
-#sidemenu-btn {
-  width: 5rem;
-
-  img {
-    width: 100%;
+  @include desktop {
+    border-radius: 3rem;
+    padding: 2rem 4.5rem;
   }
 }
 
-.green-btn {
-  $border-radius: 0.2em;
-
-  background: $lime;
-  padding: 0.7em 1.5em;
-  color: white;
-  font-weight: 500;
-  border-radius: $border-radius;
-  transition: $transition-1;
-
-  &--nav:hover {
-    background: $orangeRed;
-  }
-
-  &--hero {
-    position: relative;
-    transition: $transition-1;
-    isolation: isolate;
-    overflow: hidden;
-
-    &::before {
-      content: "";
-      width: 0%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: grid;
-      place-content: center;
-      background: $orangeRed;
-      border-radius: $border-radius;
-      transition: $transition-1;
-      z-index: -1;
-    }
-
-    &:hover::before {
-      width: 100%;
-    }
-  }
+input {
+  border: 0.2rem solid $gray;
+  border-radius: 1.86em;
 }
