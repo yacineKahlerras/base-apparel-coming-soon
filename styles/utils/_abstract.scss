@@ -41,4 +41,9 @@ button {
 input {
   border: 0.2rem solid $gray;
   border-radius: 1.86em;
+  padding: 1em 1em;
+
+  &::placeholder {
+    color: $gray;
+  }
 }

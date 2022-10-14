@@ -109,4 +109,14 @@ button {
 input {
   border: 0.2rem solid #daced0;
   border-radius: 1.86em;
+  padding: 1em 1em;
+}
+input::-moz-placeholder {
+  color: #daced0;
+}
+input:-ms-input-placeholder {
+  color: #daced0;
+}
+input::placeholder {
+  color: #daced0;
 }/*# sourceMappingURL=style.css.map */
