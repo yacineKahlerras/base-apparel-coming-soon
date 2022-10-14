@@ -143,17 +143,34 @@ body {
   align-items: center;
 }
 
-.mobile-hero-container {
-  width: min(100%, 48.3rem);
-  margin: 0 auto;
+/** left side */
+.left-side {
+  padding: 3.3rem 0rem;
 }
-.mobile-hero-container img {
+.left-side .logo {
+  margin: 0rem 2.2rem 3.1rem;
+}
+.left-side .mobile-hero-container {
+  width: min(100%, 48.3rem);
+  margin: 0 auto 6.6rem;
+}
+.left-side .mobile-hero-container img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (min-width: 56em) {
-  .mobile-hero-container {
+  .left-side .mobile-hero-container {
     display: none;
+  }
+}
+
+/** right side */
+.right-side {
+  display: none;
+}
+@media (min-width: 56em) {
+  .right-side {
+    display: flex;
   }
 }/*# sourceMappingURL=style.css.map */
