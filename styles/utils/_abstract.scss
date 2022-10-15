@@ -66,6 +66,26 @@ body {
 form {
   width: 100%;
   display: flex;
+  position: relative;
+
+  // error
+  &.input-error {
+    input {
+      border: 0.2rem solid $Soft-Red;
+      background: url("../../images/icon-error.svg") no-repeat right;
+      background-position: right 6.3rem top 50%;
+      position: relative;
+
+      @include tablet() {
+        background-position: right 6.3rem top 50%;
+      }
+    }
+
+    p {
+      opacity: 1;
+      transition: $transition-1;
+    }
+  }
 
   // email input
   input {
@@ -82,16 +102,6 @@ form {
     &:focus {
       outline: none;
       border: 0.2rem solid $Dark-Grayish-Red;
-    }
-
-    &.input-error {
-      border: 0.2rem solid $Soft-Red;
-      background: url("../../images/icon-error.svg") no-repeat right;
-      background-position: right 6.3rem top 50%;
-
-      @include tablet() {
-        background-position: right 6.3rem top 50%;
-      }
     }
   }
 
@@ -131,5 +141,14 @@ form {
       border-radius: 3rem;
       padding: 2rem 4.5rem;
     }
+  }
+
+  //error message
+  p {
+    color: $Soft-Red;
+    position: absolute;
+    left: 2em;
+    bottom: -4.2em;
+    opacity: 0;
   }
 }

@@ -117,6 +117,22 @@ body p {
 form {
   width: 100%;
   display: flex;
+  position: relative;
+}
+form.input-error input {
+  border: 0.2rem solid hsl(0deg, 93%, 68%);
+  background: url("../../images/icon-error.svg") no-repeat right;
+  background-position: right 6.3rem top 50%;
+  position: relative;
+}
+@media (min-width: 56em) {
+  form.input-error input {
+    background-position: right 6.3rem top 50%;
+  }
+}
+form.input-error p {
+  opacity: 1;
+  transition: 0.3s;
 }
 form input {
   width: 100%;
@@ -137,16 +153,6 @@ form input::placeholder {
 form input:focus {
   outline: none;
   border: 0.2rem solid hsl(0deg, 6%, 24%);
-}
-form input.input-error {
-  border: 0.2rem solid hsl(0deg, 93%, 68%);
-  background: url("../../images/icon-error.svg") no-repeat right;
-  background-position: right 6.3rem top 50%;
-}
-@media (min-width: 56em) {
-  form input.input-error {
-    background-position: right 6.3rem top 50%;
-  }
 }
 form button {
   margin-left: -5rem;
@@ -179,6 +185,13 @@ form button:focus::after {
     border-radius: 3rem;
     padding: 2rem 4.5rem;
   }
+}
+form p {
+  color: hsl(0deg, 93%, 68%);
+  position: absolute;
+  left: 2em;
+  bottom: -4.2em;
+  opacity: 0;
 }
 
 body {
@@ -251,6 +264,7 @@ main .left-side .text-section {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding: 0 2rem;
 }
 main .left-side .text-section h1:last-of-type {
   margin-bottom: 1.8rem;
@@ -263,6 +277,7 @@ main .left-side .text-section p {
     align-items: center;
     text-align: center;
     margin: 0;
+    padding: 0;
   }
   main .left-side .text-section h1:last-of-type {
     margin-bottom: 2.4rem;
