@@ -90,10 +90,9 @@ select {
 body {
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.6rem;
-  padding-bottom: 6rem;
 }
 body h1 {
-  font-size: 3.8rem;
+  font-size: clamp(3.8rem, 4.375vw, 6.3rem);
   letter-spacing: 1.3rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -107,7 +106,7 @@ body h1.decorated-title {
 body p {
   color: hsl(0deg, 36%, 70%);
   font-weight: 400;
-  font-size: 1.4rem;
+  font-size: clamp(1.4rem, 1.111vw, 1.6rem);
 }
 @media (min-width: 56em) {
   body p {
@@ -142,7 +141,12 @@ form input:focus {
 form input.input-error {
   border: 0.2rem solid hsl(0deg, 93%, 68%);
   background: url("../../images/icon-error.svg") no-repeat right;
-  background-position-x: 19.5rem;
+  background-position: right 6.3rem top 50%;
+}
+@media (min-width: 56em) {
+  form input.input-error {
+    background-position: right 6.3rem top 50%;
+  }
 }
 form button {
   margin-left: -5rem;
@@ -181,52 +185,104 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 6rem;
+}
+@media (min-width: 56em) {
+  body {
+    padding-bottom: 0;
+  }
 }
 
-/** left side */
-.left-side {
-  width: min(100%, 48.3rem);
+main {
+  width: min(100%, 144rem);
+  /** left side */
+  /** right side */
+}
+@media (min-width: 56em) {
+  main {
+    display: flex;
+  }
+}
+main .left-side {
+  width: min(100%, 50rem);
   margin: 0 auto;
   padding: 3.3rem 0rem;
 }
-.left-side .logo {
+@media (min-width: 56em) {
+  main .left-side {
+    padding: 6.6rem 3rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 75em) {
+  main .left-side {
+    padding: 6.6rem 0rem 0rem;
+    align-items: baseline;
+  }
+}
+main .left-side .logo {
   margin: 0rem 2.2rem 3.1rem;
 }
-.left-side .mobile-hero-container {
-  width: min(100%, 48.3rem);
+@media (min-width: 56em) {
+  main .left-side .logo {
+    margin: 0rem 0rem 13.6rem;
+  }
+}
+main .left-side .mobile-hero-container {
+  width: min(100%, 50rem);
   margin: 0 auto 6.6rem;
 }
-.left-side .mobile-hero-container img {
+main .left-side .mobile-hero-container img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 @media (min-width: 56em) {
-  .left-side .mobile-hero-container {
+  main .left-side .mobile-hero-container {
     display: none;
   }
 }
-.left-side .text-section {
-  width: min(90%, 31.2rem);
+main .left-side .text-section {
+  width: min(100%, 44.2rem);
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
-.left-side .text-section h1:last-of-type {
+main .left-side .text-section h1:last-of-type {
   margin-bottom: 1.8rem;
 }
-.left-side .text-section p {
+main .left-side .text-section p {
   margin-bottom: 2.1rem;
 }
-
-/** right side */
-.right-side {
+@media (min-width: 56em) {
+  main .left-side .text-section {
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+  main .left-side .text-section h1:last-of-type {
+    margin-bottom: 2.4rem;
+  }
+  main .left-side .text-section p {
+    margin-bottom: 3.4rem;
+  }
+}
+@media (min-width: 75em) {
+  main .left-side .text-section {
+    align-items: baseline;
+    text-align: left;
+    margin: 0;
+  }
+}
+main .right-side {
   display: none;
 }
 @media (min-width: 56em) {
-  .right-side {
+  main .right-side {
     display: flex;
   }
 }/*# sourceMappingURL=style.css.map */

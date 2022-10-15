@@ -4,58 +4,107 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 6rem;
+
+  @include tablet {
+    padding-bottom: 0;
+  }
 }
 
-/** left side */
-.left-side {
-  width: $width-1;
-  margin: 0 auto;
-  padding: 3.3rem 0rem;
+main {
+  width: $width-3;
 
-  // logo
-  .logo {
-    margin: 0rem 2.2rem 3.1rem;
+  @include tablet {
+    display: flex;
   }
 
-  // hero image
-  .mobile-hero-container {
+  /** left side */
+  .left-side {
     width: $width-1;
-    margin: 0 auto 6.6rem;
+    margin: 0 auto;
+    padding: 3.3rem 0rem;
 
-    img {
-      width: 100%;
-      object-fit: cover;
+    @include tablet {
+      padding: 6.6rem 3rem 0rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     @include desktop {
-      display: none;
+      padding: 6.6rem 0rem 0rem;
+      align-items: baseline;
+    }
+
+    // logo
+    .logo {
+      margin: 0rem 2.2rem 3.1rem;
+
+      @include tablet {
+        margin: 0rem 0rem 13.6rem;
+      }
+    }
+
+    // hero image
+    .mobile-hero-container {
+      width: $width-1;
+      margin: 0 auto 6.6rem;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    // text section
+    .text-section {
+      width: $width-4;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      h1:last-of-type {
+        margin-bottom: 1.8rem;
+      }
+
+      p {
+        margin-bottom: 2.1rem;
+      }
+
+      @include tablet {
+        align-items: center;
+        text-align: center;
+        margin: 0;
+
+        h1:last-of-type {
+          margin-bottom: 2.4rem;
+        }
+
+        p {
+          margin-bottom: 3.4rem;
+        }
+      }
+
+      @include desktop {
+        align-items: baseline;
+        text-align: left;
+        margin: 0;
+      }
     }
   }
 
-  // text section
-  .text-section {
-    width: $width-2;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+  /** right side */
+  .right-side {
+    display: none;
 
-    h1:last-of-type {
-      margin-bottom: 1.8rem;
+    @include tablet {
+      display: flex;
     }
-
-    p {
-      margin-bottom: 2.1rem;
-    }
-  }
-}
-
-/** right side */
-.right-side {
-  display: none;
-
-  @include desktop {
-    display: flex;
   }
 }
