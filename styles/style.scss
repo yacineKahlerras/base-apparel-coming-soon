@@ -4,18 +4,23 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 6rem;
+  background: $gradient-1;
 
   @include tablet {
     padding-bottom: 0;
+    background: url("../images/bg-pattern-desktop.svg") no-repeat;
+    background-size: cover;
   }
 }
 
 main {
   width: $width-3;
+  height: 100%;
+  padding-bottom: 10rem;
 
   @include tablet {
     display: flex;
+    padding-bottom: 0rem;
   }
 
   /** left side */

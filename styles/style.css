@@ -200,22 +200,27 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 6rem;
+  background: linear-gradient(to bottom, hsl(0deg, 0%, 100%), hsl(0deg, 100%, 98%));
 }
 @media (min-width: 56em) {
   body {
     padding-bottom: 0;
+    background: url("../images/bg-pattern-desktop.svg") no-repeat;
+    background-size: cover;
   }
 }
 
 main {
   width: min(100%, 144rem);
+  height: 100%;
+  padding-bottom: 10rem;
   /** left side */
   /** right side */
 }
 @media (min-width: 56em) {
   main {
     display: flex;
+    padding-bottom: 0rem;
   }
 }
 main .left-side {
